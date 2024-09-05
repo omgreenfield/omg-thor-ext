@@ -1,6 +1,6 @@
 # Thor extension
 
-[Matt Brictson](https://github.com/mattbrictson) had the same complaints I did about [Thor](https://github.com/rails/thor). Well, he went and fixed them all, I put them into a gem and now use it in many of my Thor CLIs.
+[Matt Brictson](https://github.com/mattbrictson) had the [same complaints](https://mattbrictson.com/blog/fixing-thor-cli-behavior) I did about [Thor](https://github.com/rails/thor). Well, he went and fixed them all, I put them into a gem and now use it in many of my Thor CLIs.
 
 ## Original source
 
