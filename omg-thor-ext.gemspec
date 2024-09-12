@@ -3,7 +3,7 @@
 require_relative 'lib/thor_ext'
 
 Gem::Specification.new do |spec|
-  spec.name = 'thor-ext'
+  spec.name = 'omg-thor-ext'
   spec.version = ThorExt::VERSION
   spec.authors = ['Matthew Greenfield']
   spec.email = ['mattgreenfield1@gmail.com']
@@ -15,10 +15,10 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.7.7'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = "TODO: Put your gem's public repo URL here."
+  spec.metadata['source_code_uri'] = spec.homepage
+  spec.metadata['rubygems_mfa_required'] = 'true'
+  spec.require_paths = ['lib']
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   gemspec = File.basename(__FILE__)
   spec.files = IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|
     ls.readlines("\x0", chomp: true).reject do |f|
@@ -26,6 +26,4 @@ Gem::Specification.new do |spec|
         f.start_with?(*%w[.git Gemfile])
     end
   end
-  spec.require_paths = ['lib']
-  spec.metadata['rubygems_mfa_required'] = 'true'
 end
